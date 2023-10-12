@@ -1,0 +1,40 @@
+.cardContainer {
+    color: #FFFFFF;
+    position: relative;
+    max-width: 184px;
+}
+
+.voteAverage {
+    position: absolute;
+    width: 82px;
+    height: 32px;
+    top: 248px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0px 16px 0px 16px;
+    background: linear-gradient(180deg, rgba(7, 7, 7, 0.8) 0%, rgba(49, 49, 49, 0.592) 100%);
+}
+
+.voteText {
+    font-size: 18px;
+    font-weight: 600px;
+    color: #FFED4E;
+}
+
+.image {
+    border-radius: 20px;
+}
+
+.movieTitle {
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 14px;
+}
+
+.releaseDate {
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 4px;
+    text-align: left;
+}
