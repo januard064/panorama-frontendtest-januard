@@ -10,11 +10,20 @@ const MovieCard = (props) => {
     const imageUrl = `${baseUrl}${"w185"}${movie.poster_path}`
 
 
-    const getMovieYear = (year) =>{
+    const getMovieYear = (year) => {
 
         const date = year.split("-")
 
         return date[0]
+    }
+
+    const getDisplayTitle = (title) => {
+        if (title.length > 40) {
+            return title.slice(0, 40) + '...'
+
+        } else {
+            return title
+        }
     }
 
     return (
@@ -23,11 +32,11 @@ const MovieCard = (props) => {
             <img src={imageUrl} alt="Movie Poster" className={styles.image} />
             <div className={styles.voteAverage}>
                 <div className={styles.voteText}>
-                    {movie.vote_average} <span style={{ color:'#FFFFFF', fontSize:'14px', fontWeight:400 }}>/ 10</span>
+                    {movie.vote_average} <span style={{ color: '#FFFFFF', fontSize: '14px', fontWeight: 400 }}>/ 10</span>
                 </div>
             </div>
             <div className={styles.movieTitle}>
-                {movie.title}
+                {getDisplayTitle(movie.title)}
             </div>
             <div className={styles.releaseDate}>
                 {getMovieYear(movie.release_date)}
