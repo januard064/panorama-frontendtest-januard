@@ -1,10 +1,14 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 import styles from './movie-card.module.css'
+
 
 const MovieCard = (props) => {
 
     const { movie } = props
+
+    const navigate = useNavigate()
 
     const baseUrl = "https://image.tmdb.org/t/p/"
     const imageUrl = `${baseUrl}${"w185"}${movie.poster_path}`
@@ -26,8 +30,12 @@ const MovieCard = (props) => {
         }
     }
 
+    const handleOpenDetail = () => {
+        navigate(`movie/${movie.id}`)
+    }
+
     return (
-        <div className={styles.cardContainer}>
+        <div className={styles.cardContainer} onClick={handleOpenDetail}>
             {/* {} */}
             <img src={imageUrl} alt="Movie Poster" className={styles.image} />
             <div className={styles.voteAverage}>

@@ -35,7 +35,7 @@ function App() {
         <Router>
           <Routes>
             <Route path='*' element={<LandingPage />} />
-            <Route path={`movie/:movie_id`} element={<MovieDetail />} />
+            <Route path={`/movie/:movie_id`} element={<MovieDetail />} />
           </Routes>
         </Router>
         <Footer />

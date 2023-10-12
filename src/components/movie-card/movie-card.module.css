@@ -2,6 +2,7 @@
     color: #FFFFFF;
     position: relative;
     max-width: 184px;
+    cursor: pointer;
 }
 
 .voteAverage {

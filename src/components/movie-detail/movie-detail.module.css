@@ -1,0 +1,24 @@
+.bannerContainer {
+    width: 100%;
+    height: 597px;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+}
+
+.imagethumb {
+    border-radius: 20px;
+    max-width: 184px;
+}
+
+.detailContainer {
+    display: flex;
+    margin-top: 30px;
+}
+
+.movietitle{
+    font-size: 42px;
+    font-weight: 700;
+}
