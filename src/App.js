@@ -4,22 +4,27 @@ import './App.css';
 
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
-// import dotenv from 'dotenv'
 
+import Header from './components/header/header';
+import Footer from './components/footer/footer';
 import LandingPage from './pages/LandingPage';
 import MovieDetail from './pages/MovieDetail';
-// dotenv.config();
 
 function App() {
 
 
   return (
-    <Router>
-      <Routes>
-        <Route path='*' element={<LandingPage />} />
-        <Route path={`movie/:movie_id`} element={<MovieDetail />} />
-      </Routes>
-    </Router>
+    <div style={{ position: 'relative' }}>
+      <Header />
+      <Router>
+        <Routes>
+          <Route path='*' element={<LandingPage />} />
+          <Route path={`movie/:movie_id`} element={<MovieDetail />} />
+        </Routes>
+      </Router>
+      <Footer />
+    </div>
+
   );
 }
 
