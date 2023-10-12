@@ -14,9 +14,9 @@ const NewReleaseSection = (props) => {
         fetch(`https://api.themoviedb.org/3/movie/popular?language=en-US&page=1&api_key=${process.env.REACT_APP_MY_KEY}`)
             .then(res => res.json())
             .then(response => {
-                // console.log('response', response.results)
                 setNewReleaseMovie(response.results)
             })
+
     }, [])
 
     return (

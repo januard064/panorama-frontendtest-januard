@@ -12,8 +12,8 @@ const MovieList = (props) => {
         <>
             <div className={styles.trendingContainer}>
                 {movies.splice(0, 6).map((trend, index) => (
-                    <div style={{ marginLeft: index == 0 ? '' : '24px' }}>
-                        <MovieCard movie={trend} key={trend.title} />
+                    <div key={trend.title} style={{ marginLeft: index == 0 ? '' : '24px' }}>
+                        <MovieCard movie={trend} />
                     </div>
                 ))}
             </div>

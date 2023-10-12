@@ -22,9 +22,6 @@ const Banner = () => {
             const imageUrl = `${baseUrl}${"w1280"}${bannerMovie.poster_path}`
             setImgUrl(imageUrl)
         }
-
-
-        console.log(bannerMovie)
     }, [bannerMovie])
 
 
